@@ -1,12 +1,12 @@
 const cl = console.log;
 
-const postsContainer = document.getElementById("postsContainer");
 const title = document.getElementById("title");
 const body = document.getElementById("body");
 const userId = document.getElementById("userId");
 const postsForm = document.getElementById("postsForm");
 const addBtn = document.getElementById("addBtn");
 const updateBtn = document.getElementById("updateBtn");
+const postsContainer = document.getElementById("postsContainer");
 
 let BASE_URL = `https://jsonplaceholder.typicode.com`;
 
