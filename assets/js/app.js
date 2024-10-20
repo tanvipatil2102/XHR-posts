@@ -124,6 +124,8 @@ const onSubmitBtn = (eve) => {
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", POST_URL);
+    xhr.setRequestHeader('Content-type', 'application/json');
+    xhr.setRequestHeader('Authorization', 'Bearer Token from LS');
     xhr.send(JSON.stringify(obj));
     xhr.onload = function(){
         if(xhr.status >= 200 && xhr.status <= 299 && xhr.readyState === 4){
@@ -168,6 +170,8 @@ const onUpdateClick = (eve) => {
 
     xhr.open("PATCH", updateUrl);
 
+    xhr.setRequestHeader('Content-type', 'application/json');
+    xhr.setRequestHeader('Authorization', 'Bearer Token from LS');
     xhr.send(JSON.stringify(obj));
 
     xhr.onload = function(){
@@ -187,4 +191,3 @@ const onUpdateClick = (eve) => {
 
 postsForm.addEventListener("submit", onSubmitBtn);
 updateBtn.addEventListener("click", onUpdateClick);
-
